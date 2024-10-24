@@ -1,0 +1,12 @@
+.background {
+    width: 100%; /* Full width */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Cover the area */
+}
+
+/* Responsive styles for images */
+@media (max-width: 768px) {
+    .background {
+        height: 100vh; /* Full height on mobile */
+    }
+}
