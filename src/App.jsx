@@ -1,22 +1,17 @@
-import { useState } from 'react';
-import Background from './Components/Background/Background';
+import React from 'react';
 import Navbar from './Components/Navbar/Navbar';
+import Hero from './Components/Hero/Hero';
+import Background from './Components/Background/Background'; // Import the Background component
+import './App.css';
 
 const App = () => {
-  const heroData = [
-    { text1: "Halooo", text2: "Good Morning" },
-    { text1: "Heyyyyy", text2: "Beautiful" },
-    { text1: "Byeee", text2: "Tataaa" },
-  ];
-  const [heroCount, setHeroCount] = useState(0);
-  const [playStatus, setPlayStatus] = useState(true);
-
   return (
-    <div>
+    <div className="app-background">
+      <Background playStatus={true} heroCount={0} /> {/* Set playStatus to true to play the video */}
       <Navbar />
-      <Background playStatus={playStatus} heroCount={heroCount} />
+      <Hero />
     </div>
   );
-}
+};
 
 export default App;
